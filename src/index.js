@@ -21,7 +21,7 @@ const app = express();
     // app.on() is a listener function that is inbuilt in express,
     // it works to listen any event
     // here it is used to listen the error event to prevent having unknown error
-        app.on("error", ()=> {
+        app.on("error", (error)=> {
             console.log("ERROR:", error);
             throw error;
         })
